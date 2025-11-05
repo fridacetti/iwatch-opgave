@@ -17,13 +17,19 @@ export default function Home() {
     setSelectedProductColor(selectedProductColor);
   };
   return (
-    <div className="grid-container">
+    <div className="mx-20 grid grid-cols-[2.5fr_2fr] grid-rows-[auto_auto_auto_1fr_auto] gap-y-6 py-16">
       <Navigation />
       <Title />
-      <Colorswitch selectedProductColor={selectedProductColor} handleProductColorClick={handleProductColorClick} />
+      <Colorswitch
+        selectedProductColor={selectedProductColor}
+        handleProductColorClick={handleProductColorClick}
+      />
       <Button />
       <PageIndicator />
-      <Watches selectedProductColor={selectedProductColor} handleProductColorClick={handleProductColorClick} />
+      <Watches
+        selectedProductColor={selectedProductColor}
+        handleProductColorClick={handleProductColorClick}
+      />
     </div>
   );
 }
